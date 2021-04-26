@@ -36,7 +36,7 @@ const App = (): JSX.Element => {
     // el.innerHTML = <p>fsdfda</p>;
 
     // setTodos(JSON.parse(localStorage.getItem("todos") as string) || [])    
-    window.location.pathname = "/";
+    window.location.href =  window.location.origin;
   };
 
   const changeFilterState = (e: React.ChangeEvent<HTMLInputElement>): void => {
