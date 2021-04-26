@@ -17,7 +17,7 @@ type TodoItemProps = {
 
 const TodoItem = (props: TodoItemProps): JSX.Element => {
   const history = useHistory();
-  const handleLink = (path: any) => history.push(path);
+  const handleLink = (path: string) => history.push(path);
 
   return (
     <li>

@@ -1,6 +1,6 @@
 import "../css/App.css";
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, useHistory } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import { Home } from "./Home";
 import { Detail } from "./Detail";
 import { Edit } from "./Edit";
@@ -26,10 +26,17 @@ const App = (): JSX.Element => {
 
   const redirectToRoot = (): void => {
 
-    const history = useHistory();
-    // const handleLink = (path: any) => history.push(path);
-    history.push("/");
-    // window.location.pathname = "/";
+    window.history.pushState(
+      {}, // 遷移時にobjectを登録できる, ページ遷移イベントのときにその時点でのobject(つまりstate)を取り出してアクセスできる
+      "React App", // ページタイトル,
+      "/" // 遷移先として登録するURL
+    )
+
+    
+    // el.innerHTML = <p>fsdfda</p>;
+
+    // setTodos(JSON.parse(localStorage.getItem("todos") as string) || [])    
+    window.location.pathname = "/";
   };
 
   const changeFilterState = (e: React.ChangeEvent<HTMLInputElement>): void => {

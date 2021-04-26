@@ -1,6 +1,6 @@
 import "../css/App.css";
 import { useEffect } from "react";
-import { useParams,useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 type EditProps = {
   todos: [
@@ -26,7 +26,7 @@ const Edit = (props: EditProps): JSX.Element => {
   const id = parseInt(idString);
 
   const history = useHistory();
-  const handleLink = (path: any) => history.push(path);
+  const handleLink = (path: string) => history.push(path);
 
   useEffect(() => {
     if (!props.editingText) {

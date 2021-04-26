@@ -1,5 +1,5 @@
 import "../css/App.css";
-import { useParams,useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 type DetailProps = {
   todos: [
@@ -21,7 +21,7 @@ const Detail = (props: DetailProps): JSX.Element => {
   const id = parseInt(idString);
 
   const history = useHistory();
-  const handleLink = (path: any) => history.push(path);
+  const handleLink = (path: string) => history.push(path);
 
   return (
     <div className="container">
